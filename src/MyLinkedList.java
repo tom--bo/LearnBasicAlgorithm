@@ -23,7 +23,7 @@ public class MyLinkedList implements Iterable{
 		q.next = newCell;
 	}
 	
-	public MyLinkedListIterator iterator()
+	public MyLinkedListIterator iterator1()
 	{
 		return new MyLinkedListIterator(this);
 	}
