@@ -1,5 +1,7 @@
+import java.util.Iterator;
 
-public class MyLinkedList { //implements Iterable{
+
+public class MyLinkedList implements Iterable{
 	final Cell header;
 	
 	public MyLinkedList()
@@ -21,12 +23,10 @@ public class MyLinkedList { //implements Iterable{
 		q.next = newCell;
 	}
 	
-	/*
-	public MyLinkedListIterator()
+	public MyLinkedListIterator iterator()
 	{
 		return new MyLinkedListIterator(this);
 	}
-	*/
 	
 	public String toString()
 	{
@@ -36,5 +36,11 @@ public class MyLinkedList { //implements Iterable{
 		}
 		s += "]";
 		return s;
+	}
+
+	@Override
+	public Iterator iterator() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

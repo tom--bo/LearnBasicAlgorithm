@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.*;
 import java.util.EmptyStackException;
 
 public class Main {
@@ -6,6 +7,29 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		
 		// MyLinkedList テスト
+		MyLinkedList list = new MyLinkedList();
+		list.insert(20);
+		list.insert(15);
+		list.insert(18);
+		list.insert(37);
+		list.insert(3);
+		System.out.println(list);
+		
+		System.out.println("---< イテレータ >----");
+		Iterator iter = list.iterator();
+		int count = 1;
+		while (iter.hasNext()) {
+			System.out.println(count++ + "番目の要素： " + iter.next());
+		}
+		
+		System.out.println("---< 拡張for文 >----");
+		count = 1;
+		for (Object o: list) {
+			System.out.println(count++ + "番目の要素： " + o);
+		}
+		
+		// MyLinkedList テスト
+		/*
 		MyLinkedList list = new MyLinkedList();
 		
 		System.out.println(list);
@@ -15,6 +39,7 @@ public class Main {
 		list.insert(12);
 		list.insert(4);
 		System.out.println(list);
+		*/
 		
 		// MyQueue テスト
 		/*
