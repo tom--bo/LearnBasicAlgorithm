@@ -5,7 +5,26 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
+		// MyQueue テスト
+		MyQueue q = new MyQueue();
+
+		q.enqueue("a");
+		q.enqueue("b");
+		q.enqueue("c");
+		System.out.println(q);
+		System.out.println(q.dequeue() + "を取り出した");
+		System.out.println(q.dequeue() + "を取り出した");
+		System.out.println(q);
+
+		q.enqueue("d");
+		System.out.println(q.dequeue() + "を取り出した");
+		System.out.println(q.dequeue() + "を取り出した");
+		System.out.println(q);
+
+		
+		
 		// 逆ポーランド記法電卓
+		/*
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		CalculatorRPN calculator = new CalculatorRPN();
 		
@@ -20,6 +39,7 @@ public class Main {
 				System.out.println(e.getMessage());
 			}
 		}
+		*/
 
 		// MyStack テスト
 		/*
