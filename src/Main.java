@@ -5,7 +5,19 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
+		// MyLinkedList テスト
+		MyLinkedList list = new MyLinkedList();
+		
+		System.out.println(list);
+		list.insert(5);
+		list.insert(7);
+		list.insert(2);
+		list.insert(12);
+		list.insert(4);
+		System.out.println(list);
+		
 		// MyQueue テスト
+		/*
 		MyQueue q = new MyQueue();
 
 		q.enqueue("a");
@@ -20,8 +32,7 @@ public class Main {
 		System.out.println(q.dequeue() + "を取り出した");
 		System.out.println(q.dequeue() + "を取り出した");
 		System.out.println(q);
-
-		
+		*/
 		
 		// 逆ポーランド記法電卓
 		/*
