@@ -6,7 +6,20 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
+		// MyDoubleLinkedList テスト
+		MyDoublyLinkedList list = new MyDoublyLinkedList();
+		
+		System.out.println("初期状態（空リスト");
+		System.out.println(list);
+		list.insertFirst("a");
+		list.insertLast("b");
+		list.insertFirst("c");
+		list.insertFirst("d");
+		list.insertLast("e");
+		System.out.println(list);
+		
 		// MyLinkedList テスト
+		/*
 		MyLinkedList list = new MyLinkedList();
 		list.insert(20);
 		list.insert(15);
@@ -27,6 +40,7 @@ public class Main {
 		for (Object o: list) {
 			System.out.println(count++ + "番目の要素： " + o);
 		}
+		*/
 		
 		// MyLinkedList テスト
 		/*
