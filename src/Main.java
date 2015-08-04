@@ -6,7 +6,28 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
+		// BinaryTreeNode テスト
+		BinaryTreeNode tree = new BinaryTreeNode(
+				"a",
+				new BinaryTreeNode(
+                        "b",
+						new BinaryTreeNode("c", null, null),
+						null
+				),
+				new BinaryTreeNode("d", null, null)
+        );
+		
+		System.out.println("行きがけ順");
+		tree.traversePreorder(tree);
+
+		System.out.println("通りがけ順");
+		tree.traverseInorder(tree);
+				
+		System.out.println("帰りがけ順");
+		tree.traversePostorder(tree);
+		
 		// MyDoubleLinkedList テスト
+		/*
 		MyDoublyLinkedList list = new MyDoublyLinkedList();
 		
 		System.out.println("初期状態（空リスト");
@@ -17,6 +38,7 @@ public class Main {
 		list.insertFirst("d");
 		list.insertLast("e");
 		System.out.println(list);
+		*/
 		
 		// MyLinkedList テスト
 		/*
