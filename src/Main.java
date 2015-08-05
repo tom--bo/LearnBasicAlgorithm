@@ -6,7 +6,72 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
+		/*
+		 * テスト用のコマンド
+		 *  +n		: nを挿入する
+		 *  -n		: nを削除する
+		 *  /n 		: nを探索する
+		 *  =string	: 直前に成功した/コマンドで発見した要素をstringにする
+		 *  p		: B木の内容を表示する
+		 *  q		: 終了する
+		 */
+		BTree tree = new BTree();
+		int[] data = {1, 100, 27, 45, 3, 135, 13 };
+		for (int x: data ){
+			tree.insert(x, "["+x+"]");
+		}
+		System.out.print(">");
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		String str = null;
+		while((str = input.readLine()) != null){
+			if(str.length() == 0) {
+                System.out.print(">");
+                continue;
+			}
+			char command = str.charAt(0);
+			
+			String arg = str.substring(1).trim();
+			if(command == 'q') {
+				break;
+			} else if (command == 'p') {
+				System.out.println(tree);
+			} else if (command == '=') {
+				if(tree.setData(arg)) {
+					System.out.println("値" + arg + "の設定に成功しました");;
+				} else {
+					System.out.println("値" + arg + "の設定に失敗しました");;
+				}
+			} else if (command == '+' || command == '-' || command == '/') {
+				int num = 0;
+				try {
+					num = Integer.parseInt(arg);
+				} catch (NumberFormatException e) {
+					System.err.println("整数以外の者が指定されました");
+					continue;
+				}
+				
+				if(command == '+') {
+					if(tree.insert(num,  "[" + num + "]")) {
+						System.out.println(num + "の挿入に成功しました");
+					} else{
+						System.out.println(num + "の挿入に失敗しました");
+					}
+				} else if (command == '-') {
+					if(tree.search(num)) {
+						System.out.println(num + "が見つかりました。値=" + tree.getData());
+					} else {
+						System.out.println(num + "が見つかりませんでした");
+					}
+				}
+			} else {
+				System.out.println("コマンド" + command + "はサポートしていません");
+			}
+			System.out.print(">");
+		}
+		
+		
 		// BinaryTreeNode テスト
+		/*
 		BinaryTreeNode tree = new BinaryTreeNode(
 				"a",
 				new BinaryTreeNode(
@@ -25,6 +90,7 @@ public class Main {
 				
 		System.out.println("帰りがけ順");
 		tree.traversePostorder(tree);
+		*/
 		
 		// MyDoubleLinkedList テスト
 		/*
