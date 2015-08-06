@@ -6,13 +6,22 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
+		// mergesort テスト
+		int[] arr = {23, 1, 55, 22, 12, 49, 78, 88, 34, 27, 65};
+		MergeSortArray.sort(arr);
+		for(int a: arr) {
+			System.out.println(a);
+		}
+		
 		// quicksort テスト
+		/*
 		int[] arr = {23, 1, 55, 22, 12, 49, 78, 88, 34, 27, 65};
 		// Quicksort1.sort(arr);
 		Quicksort2.sort(arr);
 		for(int a: arr) {
 			System.out.println(a);
 		}
+		*/
 		
 		// BTree　テスト
 		/*
