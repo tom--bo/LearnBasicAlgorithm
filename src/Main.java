@@ -6,6 +6,14 @@ public class Main {
 
 	public static void main(String[] args) throws IOException {
 		
+		// quicksort テスト
+		int[] arr = {23, 1, 55, 22, 12, 49, 78, 88, 34, 27, 65};
+		Quicksort1.sort(arr);
+		for(int a: arr) {
+			System.out.println(a);
+		}
+		
+		// BTree　テスト
 		/*
 		 * テスト用のコマンド
 		 *  +n		: nを挿入する
@@ -15,6 +23,7 @@ public class Main {
 		 *  p		: B木の内容を表示する
 		 *  q		: 終了する
 		 */
+		/*
 		BTree tree = new BTree();
 		int[] data = {1, 100, 27, 45, 3, 135, 13 };
 		for (int x: data ){
@@ -68,7 +77,7 @@ public class Main {
 			}
 			System.out.print(">");
 		}
-		
+		*/
 		
 		// BinaryTreeNode テスト
 		/*
